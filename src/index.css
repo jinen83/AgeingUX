@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+/* Base typography for readable articles */
+.prose {
+  @apply max-w-prose leading-relaxed text-gray-200;
+}
+.prose h1 { @apply text-3xl font-semibold text-white mt-4; }
+.prose h2 { @apply text-2xl font-semibold text-white mt-8; }
+.prose p { @apply my-4; }
+.prose a { @apply text-teal-300 underline underline-offset-2 hover:text-teal-200; }
+.prose ul { @apply list-disc pl-6 my-4; }
+.prose ol { @apply list-decimal pl-6 my-4; }
+.prose code { @apply rounded bg-surface-raised px-1 py-0.5 text-teal-200; }
+.prose pre { @apply bg-surface-raised p-4 rounded-lg overflow-x-auto; }
+
+/* Layout helpers */
+.container-app {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+}
