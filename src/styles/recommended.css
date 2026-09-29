@@ -1,0 +1,5 @@
+/* Chips */
+.chips { @apply flex flex-wrap gap-2; }
+.chip { @apply rounded-full border border-slate-600 bg-surface-raised/60 px-3 py-1 text-xs text-gray-200 hover:border-teal-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-300; }
+.chip-selected { @apply border-teal-400 bg-teal-600/30 text-white; }
+
