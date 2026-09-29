@@ -1,0 +1,54 @@
+import { BirthYearDropdownDemo } from '@/demos/BirthYearDropdownDemo';
+import { AgeAnchoredSelectorDemo } from '@/demos/AgeAnchoredSelectorDemo';
+import { RecommendedDesignDemo } from '@/demos/RecommendedDesignDemo';
+import '@/demos/demos.css';
+
+# Designing Age‑Friendly Dropdowns
+
+
+
+Well‑designed dropdowns help people choose quickly without guessing. For older adults, small missteps compound: tiny targets, surprise scroll jumps, hidden keyboard focus, and long ungrouped lists all raise the effort.
+
+## What makes a dropdown age‑friendly?
+
+- Clear, descriptive label above the control
+- Large click target with generous spacing
+- Keyboard support (Arrow keys, Home/End, type‑ahead)
+- Visible focus ring and open state
+- Grouped options with separators and headers
+- No auto‑scrolling the page when opening
+
+## Common pitfalls
+
+1. Placeholder text that looks like a selection
+2. 30+ ungrouped items with no search
+3. Disabling the label and relying on placeholder
+4. Confusing custom components that break native affordances
+
+## Practical checklist
+
+- Use native &lt;select&gt; when it meets needs; enhance progressively
+- Keep labels visible at all times
+- Provide search for long lists; otherwise, use alphabetic grouping
+- Preserve selection on blur; allow easy correction
+
+> Inclusive design is good design. Improving dropdowns for older adults benefits everyone.
+
+
+## Demo: Current‑Year‑First dropdown
+
+<BirthYearDropdownDemo />
+
+## Demo: Age‑Anchored selector
+
+<AgeAnchoredSelectorDemo />
+
+
+## Demo: Recommended design — Type‑ahead with decade filter
+
+<RecommendedDesignDemo />
+
+### References
+
+- WCAG 2.2: Focus appearance, target size
+- WAI‑ARIA: Combobox pattern
