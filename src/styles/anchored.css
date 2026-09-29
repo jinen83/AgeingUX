@@ -1,0 +1,8 @@
+/* Anchored age list styles */
+.anchored-list {
+  @apply w-full overflow-y-auto rounded-md border border-slate-800 bg-surface-raised/40 shadow focus:outline-none;
+}
+.anchored-list:focus {
+  @apply ring-2 ring-teal-600/40 border-teal-500/40;
+}
+.anchored-list li + li { @apply border-t border-slate-800/60; }

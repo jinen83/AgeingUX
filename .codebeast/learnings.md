@@ -7,3 +7,4 @@
 - Tailwind purge: include *.mdx in content globs to avoid missing styles.
 
 - Typecheck fails on alias imports like ‘@/...’: the custom typecheck script ignores tsconfig path aliases. Use relative imports in TS/TSX; alias is fine in MDX.
+- MDX inline HTML like <select> breaks parsing — wrap the tag name in backticks or escape as &lt;select&gt; to avoid build errors.
