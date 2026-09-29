@@ -24,3 +24,12 @@ npm run dev
 
 ## License
 MIT
+
+## Docs static site
+
+A lightweight static site lives in `docs/` for GitHub Pages. It uses Tailwind via CDN and small local CSS/JS.
+
+- Open `docs/index.html` directly or serve the repo and visit `/docs/`.
+- Base CSS: `docs/assets/site.css`
+- Base JS: `docs/assets/site.js`
+

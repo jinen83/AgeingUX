@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
+    "prebuild": "npm ci --no-audit --no-fund",
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "node scripts/typecheck.mjs"

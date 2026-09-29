@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AgeingUX — Accessible UI Patterns</title>
+    <meta name="description" content="AgeingUX: accessible, age-friendly UI patterns and demos." />
+
+    <!-- Social -->
+    <meta property="og:title" content="AgeingUX — Accessible UI Patterns" />
+    <meta property="og:description" content="AgeingUX: accessible, age-friendly UI patterns and demos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <!-- Tailwind via CDN to reuse project design system -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body class="min-h-screen bg-white text-slate-900 antialiased">
+    <a href="#content" class="skip-link">Skip to content</a>
+
+    <header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+      <div class="mx-auto max-w-3xl px-4 py-3 flex items-center justify-between">
+        <a href="./" class="flex items-center gap-2 text-slate-900 font-semibold">
+          <img src="assets/favicon.svg" alt="AgeingUX" class="h-6 w-6" />
+          <span>AgeingUX</span>
+        </a>
+        <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center rounded-md border border-slate-300 px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav id="site-nav" class="hidden md:block" aria-label="Primary">
+          <ul class="flex items-center gap-4 text-sm text-slate-700">
+            <li><a class="link" href="#demos">Demos</a></li>
+            <li><a class="link" href="#articles">Articles</a></li>
+            <li><a class="link" href="https://github.com/jinen83" rel="noopener" target="_blank">GitHub</a></li>
+          </ul>
+        </nav>
+      </div>
+      <nav id="site-nav-mobile" class="md:hidden hidden border-t border-slate-200" aria-label="Primary mobile">
+        <ul class="px-4 py-2 space-y-1 text-sm text-slate-700">
+          <li><a class="block px-2 py-1.5 rounded hover:bg-slate-50" href="#demos">Demos</a></li>
+          <li><a class="block px-2 py-1.5 rounded hover:bg-slate-50" href="#articles">Articles</a></li>
+          <li><a class="block px-2 py-1.5 rounded hover:bg-slate-50" href="https://github.com/jinen83" rel="noopener" target="_blank">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content" class="mx-auto max-w-3xl px-4">
+      <section class="py-12 md:py-16">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Accessible, age-friendly UI patterns</h1>
+        <p class="mt-3 text-slate-700 max-w-prose">Practical design guidance and interactive demos to make forms and navigation easier for everyone — especially older adults. Built with progressive enhancement and keyboard-first accessibility in mind.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#articles" class="btn-primary">Read articles</a>
+          <a href="#demos" class="btn-outline">Explore demos</a>
+        </div>
+      </section>
+
+      <section id="articles" class="py-10 border-t border-slate-200">
+        <h2 class="text-2xl font-semibold">Featured article</h2>
+        <article class="mt-4 grid gap-2">
+          <h3 class="text-xl font-semibold"><a class="link" href="../content/age-friendly-dropdowns.mdx">Designing age-friendly dropdowns</a></h3>
+          <p class="text-slate-700">Why native selects and combo boxes often fail older users — and how to design alternatives that are faster and more forgiving.</p>
+          <p class="text-slate-500 text-sm">Interactive examples included.</p>
+        </article>
+      </section>
+
+      <section id="demos" class="py-10 border-t border-slate-200">
+        <h2 class="text-2xl font-semibold">Demos</h2>
+        <ul class="mt-4 space-y-3 list-disc pl-5 text-slate-700">
+          <li><a class="link" href="../src/demos/RecommendedDesignDemo.tsx">Recommended dropdown design (code)</a></li>
+          <li><a class="link" href="../src/demos/AgeAnchoredSelectorDemo.tsx">Age-anchored selector (code)</a></li>
+          <li><a class="link" href="../src/demos/BirthYearDropdownDemo.tsx">Birth year combobox (code)</a></li>
+        </ul>
+        <p class="mt-3 text-sm text-slate-500">These links point at source files; interactive demos live in the main app.</p>
+      </section>
+    </main>
+
+    <footer class="mt-16 border-t border-slate-200">
+      <div class="mx-auto max-w-3xl px-4 py-8 text-sm text-slate-600 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 justify-between">
+        <p>© <span id="year"></span> AgeingUX</p>
+        <p><a class="link" href="https://github.com/jinen83/AgeingUX" rel="noopener" target="_blank">Source on GitHub</a></p>
+      </div>
+    </footer>
+
+    <script src="assets/site.js" defer></script>
+  </body>
+</html>
