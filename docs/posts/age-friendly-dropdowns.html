@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <title>Age-Friendly Dropdowns — AgeingUX</title>
+    <meta name='description' content='Why native selects and combo boxes often fail older users — and how to design alternatives that are faster and more forgiving.' />
+
+    <!-- Social -->
+    <meta property='og:title' content='Age-Friendly Dropdowns — AgeingUX' />
+    <meta property='og:description' content='Design guidance and interactive demos for age-friendly dropdowns.' />
+    <meta property='og:type' content='article' />
+    <meta property='og:image' content='../assets/og-image.png' />
+    <meta name='twitter:card' content='summary_large_image' />
+
+    <link rel='icon' href='../assets/favicon.svg' type='image/svg+xml' />
+
+    <!-- Tailwind via CDN to reuse project design system -->
+    <script src='https://cdn.tailwindcss.com'></script>
+    <link rel='stylesheet' href='../assets/site.css' />
+    <link rel='stylesheet' href='../assets/code.css' />
+  </head>
+  <body class='min-h-screen bg-white text-slate-900 antialiased'>
+    <a href='#content' class='skip-link'>Skip to content</a>
+
+    <header class='sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200'>
+      <div class='mx-auto max-w-3xl px-4 py-3 flex items-center justify-between'>
+        <a href='../' class='flex items-center gap-2 text-slate-900 font-semibold'>
+          <img src='../assets/favicon.svg' alt='AgeingUX' class='h-6 w-6' />
+          <span>AgeingUX</span>
+        </a>
+        <nav aria-label='Breadcrumb' class='hidden md:block text-sm text-slate-600'>
+          <ol class='flex items-center gap-2'>
+            <li><a class='link' href='../'>Home</a></li>
+            <li aria-hidden='true' class='text-slate-400'>/&nbsp;</li>
+            <li>Post</li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+
+    <main id='content' class='mx-auto max-w-3xl px-4'>
+      <article class='py-10 md:py-14'>
+        <header class='mb-8'>
+          <h1>Age-Friendly Dropdowns</h1>
+          <p class='mt-3 text-slate-600 max-w-prose'>Well‑designed dropdowns help people choose quickly without guessing. For older adults, small missteps compound: tiny targets, surprise scroll jumps, hidden keyboard focus, and long ungrouped lists all raise the effort.</p>
+        </header>
+
+        <div class='prose prose-slate max-w-none'>
+          <h2>What makes a dropdown age‑friendly?</h2>
+          <ul>
+            <li>Clear, descriptive label above the control</li>
+            <li>Large click target with generous spacing</li>
+            <li>Keyboard support (Arrow keys, Home/End, type‑ahead)</li>
+            <li>Visible focus ring and open state</li>
+            <li>Grouped options with separators and headers</li>
+            <li>No auto‑scrolling the page when opening</li>
+          </ul>
+
+          <h2>Common pitfalls</h2>
+          <ol>
+            <li>Placeholder text that looks like a selection</li>
+            <li>30+ ungrouped items with no search</li>
+            <li>Disabling the label and relying on placeholder</li>
+            <li>Confusing custom components that break native affordances</li>
+          </ol>
+
+          <h2>Practical checklist</h2>
+          <ul>
+            <li>Use native &lt;select&gt; when it meets needs; enhance progressively</li>
+            <li>Keep labels visible at all times</li>
+            <li>Provide search for long lists; otherwise, use alphabetic grouping</li>
+            <li>Preserve selection on blur; allow easy correction</li>
+          </ul>
+
+          <blockquote>Inclusive design is good design. Improving dropdowns for older adults benefits everyone.</blockquote>
+
+          <h2 id='demo-birthyear'>Demo: Current‑Year‑First dropdown</h2>
+          <div id='demo-birthyear-root' class='my-4 border border-slate-200 rounded-md p-4'>
+            <p class='text-sm text-slate-600'>Interactive demo will load here.</p>
+          </div>
+
+          <h2 id='demo-anchored'>Demo: Age‑Anchored selector</h2>
+          <div id='demo-anchored-root' class='my-4 border border-slate-200 rounded-md p-4'>
+            <p class='text-sm text-slate-600'>Interactive demo will load here.</p>
+          </div>
+
+          <h2 id='demo-recommended'>Demo: Recommended design — Type‑ahead with decade filter</h2>
+          <div id='demo-recommended-root' class='my-4 border border-slate-200 rounded-md p-4'>
+            <p class='text-sm text-slate-600'>Interactive demo will load here.</p>
+          </div>
+
+          <h3>References</h3>
+          <ul>
+            <li>WCAG 2.2: Focus appearance, target size</li>
+            <li>WAI‑ARIA: Combobox pattern</li>
+          </ul>
+        </div>
+      </article>
+    </main>
+
+    <footer class='mt-12 border-t border-slate-200'>
+      <div class='mx-auto max-w-3xl px-4 py-8 text-sm text-slate-600 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 justify-between'>
+        <p>© <span id='year'></span> AgeingUX</p>
+        <p><a class='link' href='https://github.com/jinen83/AgeingUX' rel='noopener' target='_blank'>Source on GitHub</a></p>
+      </div>
+    </footer>
+
+    <!-- Site behavior + demo prewiring -->
+    <script src='../assets/site.js' defer></script>
+    <!-- Prewired demo module (others follow the same pattern) -->
+    <script type='module' src='../assets/demos/combobox.js'></script>
+  </body>
+</html>
