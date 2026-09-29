@@ -1,0 +1,7 @@
+/* Demo helpers: kept minimal since Tailwind is loaded on docs pages */
+[role=listbox] [role=option][aria-selected=true] {
+  font-weight: 600;
+}
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}
