@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+.dist/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Env
+.env
+.env.*.local
+
+# Misc
+*.local
+
+# dhqfactory agent — do not commit install/build artifacts
+build/
+.env.*
+coverage/
